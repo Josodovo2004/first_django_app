@@ -1,0 +1,9 @@
+{% if cursos_set %}
+    <ul>
+    {% for curso in cursos_set %}
+    <li><a href = "{% url 'registroCursos:AlumnosCurso' curso.id %}">{{curso.nombreCurso}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay cursos disponibles.</p>
+{% endif %}

@@ -1,0 +1,9 @@
+{% if alumnoCurso_set %}
+    <ul>
+    {% for alumno in alumnoCurso_set %}
+        <li>{{ alumno.nombreAlumno }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay alumnos en este curso.</p>
+{% endif %}
